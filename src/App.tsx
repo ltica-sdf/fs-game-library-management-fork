@@ -1,5 +1,9 @@
-function App() {
-    return <></>;
-}
+import StoreToolbar from "./components/StoreToolbar/StoreToolbar";
 
-export default App;
+export default function App() {
+    return (
+        <main>
+            <StoreToolbar />
+        </main>
+    );
+}
