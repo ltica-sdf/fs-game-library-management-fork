@@ -1,9 +1,15 @@
+import Nav from "./components/common/nav/Nav";
+import FeaturedGames from "./components/common/FeaturedGames/FeaturedGames";
 import StoreToolbar from "./components/StoreToolbar/StoreToolbar";
-
-export default function App() {
-    return (
-        <main>
-            <StoreToolbar />
-        </main>
-    );
-}
+        
+function App() {
+  return (
+    <>
+      <Nav />
+      <FeaturedGames />
+      <StoreToolbar />
+    </>
+  );
+};
+ 
+export default App

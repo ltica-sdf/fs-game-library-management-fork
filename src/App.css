@@ -5,6 +5,13 @@ body {
     margin: 0.3em;
     padding: 0.3em;
     line-height: 1.6;
+  
+font-family: 'Press Start 2P', cursive;
+  background-color: #001540;
+  color: #ffffff;
+  margin: 0.3em;
+  padding: 0.3em;
+  line-height: 1.6;
 }
 
 main {
