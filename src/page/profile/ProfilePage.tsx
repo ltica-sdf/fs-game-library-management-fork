@@ -39,9 +39,6 @@ export default function ProfilePage({
         <section className="profile" aria-label="Profile page">
             <header className="profile__header">
                 <h2 className="profile__title">Profile</h2>
-                <p className="profile__subtitle">
-                    Avatar, display name, and bio.
-                </p>
             </header>
 
             <div className="profile__grid">
@@ -55,11 +52,11 @@ export default function ProfilePage({
                                 <img
                                     className="profile__avatar-img"
                                     src={avatarUrl}
-                                    alt=""
+                                    alt="profile__avatar-img"
                                 />
                             ) : (
                                 <div className="profile__avatar-placeholder">
-                                    🙂
+                                    Null
                                 </div>
                             )}
                         </div>

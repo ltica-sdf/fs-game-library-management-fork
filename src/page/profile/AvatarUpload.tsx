@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useId, useRef } from "react";
 
 type AvatarUploadProps = {
     avatarUrl: string | null;
@@ -10,6 +10,7 @@ export default function AvatarUpload({
     onChangeAvatarUrl,
 }: AvatarUploadProps) {
     const previousUrlRef = useRef<string | null>(null);
+    const inputId = useId();
 
     useEffect(() => {
         const previous = previousUrlRef.current;
@@ -60,20 +61,17 @@ export default function AvatarUpload({
                             className="avatar-upload__placeholder"
                             aria-hidden="true"
                         >
-                            No avatar
+                            Null
                         </div>
                     )}
                 </div>
 
                 <div className="avatar-upload__controls">
-                    <label
-                        className="avatar-upload__label"
-                        htmlFor="avatarFile"
-                    >
+                    <label className="avatar-upload__label" htmlFor={inputId}>
                         Avatar
                     </label>
                     <input
-                        id="avatarFile"
+                        id={inputId}
                         type="file"
                         accept="image/*"
                         onChange={handleFileChange}
@@ -81,6 +79,7 @@ export default function AvatarUpload({
 
                     <button
                         type="button"
+                        className="avatar-upload__remove"
                         onClick={handleRemove}
                         disabled={!avatarUrl}
                     >
