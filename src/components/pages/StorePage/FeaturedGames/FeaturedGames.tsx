@@ -61,6 +61,16 @@ function FeaturedGames() {
     });
   }
 
+  /** Updates current review for a specific game as the user types */
+  function handleDraftChange(gameId: number, text: string) {
+    setDraftReviews((prev) => {
+      return {
+        ...prev,
+        [gameId]: text,
+      };
+    });
+  }
+
   return (
     <section className="featured-games">
       <h2>Featured Games</h2>
