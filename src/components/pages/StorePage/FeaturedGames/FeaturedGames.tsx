@@ -13,10 +13,31 @@ type ReviewFormProps = {
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 };
 
+/** Form for adding the game review. */
+function ReviewForm({ value, onChange, onSubmit }: ReviewFormProps) {
+  const trimmed = value.trim();
+
+  return (
+    <form className="review-form" onSubmit={onSubmit}>
+      <textarea
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder="Write Your Review!"
+      />
+      <div className="review-form-footer">
+        <button type="submit" disabled={trimmed.length === 0}>
+          Add review
+        </button>
+      </div>
+    </form>
+  );
+}
+
 function FeaturedGames() {
   const [draftReviews, setDraftReviews] = useState<{ [id: number]: string }>({});
   const [reviewsByGame, setReviewsByGame] = useState<{ [id: number]: string[]}>({});
   const [openReview, setOpenReview] = useState<{ [id: number]: boolean }>({});
+
   const featuredGames: FeaturedGame[] = [
     { id: 1, title: "EarthBound", image: "/EB.jpg" },
     { id: 2, title: "The Legend of Zelda", image: "/LOZOOT.jpg" },
