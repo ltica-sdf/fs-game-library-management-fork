@@ -30,7 +30,7 @@ function ReviewForm({ value, onChange, onSubmit }: ReviewFormProps) {
       <textarea
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Write Your Review Here!"
+        placeholder="Write Here"
       />
       <div className="review-form-footer">
         <button type="submit" disabled={trimmed.length === 0}>
@@ -138,8 +138,12 @@ function FeaturedGames({
               <img src={game.image} alt={game.title} />
               <span className="game-title">{game.title}</span>
 
-              <button type="button" onClick={() => toggleReview(game.id)}>
-                {isOpen ? "Cancel" : "Write Review"}
+              <button
+                type="button"
+                className="review-button"
+                onClick={() => toggleReview(game.id)}
+              >
+                {isOpen ? "Cancel" : "Write Review!"}
               </button>
 
               {isOpen && (
