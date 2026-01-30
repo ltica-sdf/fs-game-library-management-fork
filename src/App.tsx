@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Nav from "./components/common/nav/Nav";
 import StoreToolbar from "./components/pages/StorePage/StoreToolbar/StoreToolbar";
 import StorePage from "./components/pages/StorePage/StorePage";
-import LibraryPage from "./components/pages/LibraryPage";
+import LibraryPage from "./components/pages/LibraryPage/LibraryPage";
 import ProfilePage from "./components/pages/ProfilePage/ProfilePage";
 import { useState } from "react";
 
