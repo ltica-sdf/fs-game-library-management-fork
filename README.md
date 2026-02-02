@@ -20,4 +20,3 @@ account information.
    can uninstall the games I'm not playing.
 3. **Mikhail**, As a gamer, I want to be able to have a wishlist of games and
    be able to buy games with ease while seeing if they have a discount on them.
-Test
